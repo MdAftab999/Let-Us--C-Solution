@@ -1,0 +1,829 @@
+Solution of lets C
+Q1:- 
+#include<stdio.h>
+int main(){
+int salary;
+float gross_salary;
+printf("Enter basic Salary of Ramesh");
+scanf("%d",&salary);
+gross_salary = salary+0.4*salary+0.2*salary;
+printf("The gross_salary of Ramesh is: %f",gross_salary);
+return 0;
+}
+Q2-
+#include<stdio.h>
+
+int main(){
+float distance,m,f,i,cm;
+printf("Enter the distance between two cities in KM:");
+scanf("%f",&distance);
+//1km=1000m
+//1km=3280.84 feet
+//1km=39370.1 inches
+//1km=100000cm
+m = 1000*distance;
+f = 3280.84*distance;
+i = 39370.1*distance;
+cm = 100000*distance;
+printf("The distance in meter is : %f\n", m);
+printf("The distance in feet is : %f\n", f);
+printf("The distance in inches is : %f\n", i);
+printf("The distance in centimetre is : %f\n", cm);
+return 0;
+}
+Q3
+#include<stdio.h>
+
+int main(){
+int s1,s2,s3,s4,s5;
+float total,percentage;
+printf("Enter mark in s1: \n");
+scanf("%d",&s1);
+printf("Enter mark in s2: \n");
+scanf("%d",&s2);
+printf("Enter mark in s3: \n");
+scanf("%d",&s3);
+printf("Enter mark in s4: \n");
+scanf("%d",&s4);
+printf("Enter mark in s5: \n");
+scanf("%d",&s5);
+total=s1+s2+s3+s4+s5;
+percentage=(total/500)*100;
+printf("The total marks are : %f\n",total);
+printf("The percentage is : %f\n",percentage);
+return 0;
+}
+q4
+#include<stdio.h>
+
+int main(){
+float f,c;
+printf("Enter the temparature in farenheit");
+scanf("%f",&f);
+c=5*(f-32)/9;
+printf("The temperature in c: %f",c);
+return 0;
+}
+q5
+#include<stdio.h>
+
+int main(){
+float l,b,p,a_r,r,c,a_c;
+printf("Enter the lenght of ractangle");
+scanf("%f",&l);
+printf("Enter the breath of ractangle");
+scanf("%f",&b);
+printf("Enter the radius of circle");
+scanf("%f",&r);
+p = 2*(l+b);
+a_r = l*b;
+c = 2*3.14*r;
+a_c = 3.14*r*r;
+printf("The area of ractangle is :%f",a_r);
+printf("The perimeter of ractangle is : %f",p);
+printf("The circumference of circle is : %f", c);
+printf("The area of circle is : %f",a_c);
+return 0 ;
+}
+Qg
+#include<stdio.h>
+
+int main(){
+int num,d1,d2,d3,d4,d5,sum;
+printf("Enter the number");
+scanf("%d", &num);
+d1 = num/10000;
+d2 = (num-10000*d1)/1000;
+d3 = (num-10000*d1-1000*d2)/100;
+d4 = (num-10000*d1-1000*d2-100*d3)/10;
+d5 = num%10;
+printf("The digit at 10- thousand position is:  %d\n",d1);
+printf("The digit at 10- thousand position is:  %d\n",d2);
+printf("The digit at 10- thousand position is:  %d\n",d3);
+printf("The digit at 10- thousand position is:  %d\n",d4);
+printf("The digit at 10- thousand position is:  %d\n",d5);
+sum = d1+d2+d3+d4+d5;
+printf("The sum of the digits of the number you entered is: %d", sum);
+return 0;
+}
+Qf
+#include<stdio.h>
+
+int main(){
+    int c,d,e;
+    printf("\n Enter the location of C:");
+    scanf("%d", &c);
+    printf("\n Enter the location of D :");
+    scanf("%d", &d);
+    e=c;
+    c=d;
+    d=e;
+    printf("The new location of C is :%d\n", c);
+    printf("The new location of D is : %d\n", d);
+    return 0;
+}
+h
+#include<stdio.h>
+
+int main(){
+    int num,d1,d2,d3,d4,d5,sum;
+printf("Enter the number");
+scanf("%d", &num);
+d1 = num/10000;
+d2 = (num-10000*d1)/1000;
+d3 = (num-10000*d1-1000*d2)/100;
+d4 = (num-10000*d1-1000*d2-100*d3)/10;
+d5 = num%10;
+//printf("The digit at 10- thousand position is:  %d\n",d1);
+//printf("The digit at 10- thousand position is:  %d\n",d2);
+//printf("The digit at 10- thousand position is:  %d\n",d3);
+//printf("The digit at 10- thousand position is:  %d\n",d4);
+//printf("The digit at 10- thousand position is:  %d\n",d5);
+//sum = d1+d2+d3+d4+d5;
+printf("The reverse number is:%d%d%d%d%d", d5,d4,d3,d2,d1);
+
+    return 0;
+}
+I
+#include<stdio.h>
+
+int main(){
+int n, f, l, sum, num, d=1;
+printf("Enter the number:");
+scanf("%d", &n);
+num = n;
+while(num!=0)
+{num = num/10;
+d = d*10;
+}
+d =d/10;
+f = n/d;
+l = n%10;
+sum = f+l;
+printf("sum of first and last digit of %d is: %d",n,sum);
+    return 0;
+}
+j
+#include<stdio.h>
+#include<conio.h>
+int main(){
+    int rs=0,one=0,two=0,five=0, ten=0,fifty=0,hundred=0;
+    printf("Enter the sum of  rupees:");
+    scanf("%d",&rs);
+    if(rs>=100)
+    {
+        hundred = rs/100;
+        rs = rs%100;
+    }
+    
+       if(rs>=50)
+    {
+        fifty= rs/50;
+        rs = rs%50;
+    }
+       if(rs>=10)
+    {
+        ten= rs/10;
+        rs = rs%10;
+    }
+       if(rs>=5)
+    {
+        five = rs/5;
+        rs = rs%5;
+    }
+       if(rs>=2)
+    {
+        two= rs/2;
+        rs = rs%2;
+    }
+       if(rs>=1)
+    {
+        one= rs;
+    }
+    printf("Rs 100 = %d\n Rs 50 = %d\n Rs 10 = %d\n Rs 5 = %d\n Rs 2 = %d\n Rs 1 = %d\n", hundred, fifty,ten,five,two,one);
+    return 0;
+}
+k
+#include<stdio.h>
+
+int main(){
+   float s, p, c;
+   printf("Enter the selling price of 15 items:");
+   scanf("%f", &s);
+   printf("Enter the profit on 15 items:");
+   scanf("%f", &p);
+   c = (s-p)/15;
+   printf("\nthe cost price of an items is:%f", c);
+    return 0;
+}
+L
+#include<stdio.h>
+
+int main(){
+ int num, sum, i,number,count=0,n=1;
+ printf("Enter N digits Number:");
+ scanf("%d", &num);
+ number = num;
+ while(number!=0)
+ {
+    number = number/10;
+    count = count +1;
+ }
+ for(i=1;i<count;i++)
+ {
+    n= n*10;
+    n= n+1;
+ }
+ sum = num + n;
+ printf("output: %d",sum);
+    return 0;
+}
+Chapter 2{ control decison}
+Q(C)
+a:-
+#include<stdio.h>
+int main(){
+   float selling_price,cost_price, income;
+   printf("Enter the the value of cost price:");
+   scanf("%f",&cost_price);
+   printf("Enter the value of selling price:");
+   scanf("%f",&selling_price);
+   income = selling_price - cost_price;
+   if(income>0){
+    printf("income is :%f\n",income);
+   }
+    else if(income<0){
+    printf("Loss is: %.1f\n",income);
+   }
+   else if(income==0){
+    printf("The overall income is Zero");
+   }
+    return 0;
+}
+b-
+#include<stdio.h>
+int main(){
+ int num;
+ printf("Enter any number");
+ scanf("%d",&num);
+ if(num%2==0){
+    printf("This number is even\t");
+ }
+    else{
+    printf("This number is odd\t");
+     }
+    return 0;
+}
+c
+#include<stdio.h>
+int main(){
+ int year;
+ printf("Enter any year: ");
+ scanf("%d", &year);
+ if(year%100==0)
+ {
+    if(year%400==0)
+    {
+        printf("%d is a leap year\n", year);
+
+    }
+    else
+    {
+        printf("%d is not a leap year", year);
+    }
+}
+else
+{
+    if(year%4==0)
+    {
+        printf("%d is a leap year\n", year);
+    }
+    else
+    {
+        printf("%dis not a leap year\n", year);
+    }
+}
+return 0;
+}
+d
+#include<stdio.h>
+int main(){
+    int year, normal_days, leap_yer_days, total_days, odd_days;
+    printf("Enter the yeear: ");
+    scanf("%d",&year);
+    normal_days = (year-1)*365;
+    leap_yer_days = (year-1)/4+(year-1)/400-(year-1)/100;
+    total_days = leap_yer_days+normal_days;
+    odd_days = total_days%7;
+    if(odd_days==0)
+    {
+    printf("Monday\n");
+    }  
+      if(odd_days==1)
+    {
+    printf("Tuesday\n");
+    }
+
+   if(odd_days==2)
+   {
+ 
+    printf("Wednesday\n");
+    }  
+     if(odd_days==3)
+    {
+    printf("Thursday\n");
+    }  
+       if(odd_days==4)
+    {
+    printf("Friday\n");
+    }   
+    if(odd_days==5)
+    {
+    printf("Saturday\n");
+    }
+         if(odd_days==6)
+    {
+    printf("Sunday\n");
+    }
+    return 0;
+    }  
+e
+#include<stdio.h>
+int main(){
+    int number,a,b,c,d,e, reverse_number;
+    printf("Enter the 5 digits number: ");
+    scanf("%d", &number);
+a= number/10000;
+b=(number-a*10000)/1000;
+c=(number-a*10000-b*1000)/100;
+d=(number-a*10000-b*1000-c*100)/10;
+e=number%10;
+printf("The digits are : %d\n",a);
+printf("The digits are : %d\n",b);
+printf("The digits are : %d\n",c);
+printf("The digits are : %d\n",d);
+printf("The digits are : %d\n",e);
+printf("The reverse number %d is %d%d%d%d%d\n", number,e,d,c,b,a);
+reverse_number = e*10000+d*1000+c*100+b*10+a;
+printf("The reverse of number is:  %d\n", reverse_number);
+if(number==reverse_number)
+{
+    printf("The number is same number\n");
+}
+else
+{
+    printf("The reverse number is not same number\n");
+
+}
+ return 0;
+}
+f types 1
+#include<stdio.h>
+int main()
+{
+    int ram, shyam, ajay;
+    printf("Enter the age of Ram: \n");
+    scanf("%d",&ram);
+    printf("Enter the age of shyam: \n");
+    scanf("%d",&shyam);
+    printf("Enter the age of Ajay : \n");
+    scanf("%d",&ajay);
+    if(ram<shyam)
+    {
+        if(ram<ajay)
+        {
+            printf("Ram is youngest");
+        }
+        else
+        {
+            printf("Ajay is the youngest");
+        }
+    }
+    else if(shyam<ajay)
+    {
+        printf("Shyam is youngest");
+    }
+    else
+    {
+        printf("Ajay is the youngest");
+    }
+    return 0;
+}
+F
+#include<stdio.h>
+int main()
+{
+    int ram, shyam, ajay;
+    printf("Enter the age of Ram :\n");
+    scanf("%d", &ram);
+    printf("Enter the age of Shyam: \n");
+    scanf("%d", &shyam);
+    printf("Enter the age of Ajay: \n");
+    scanf("%d", &ajay);
+    if(ram>shyam && ram>ajay)
+    {
+        printf("Ram is eldest in all\n");
+        if(shyam>ajay)
+        {
+            printf("Shyam is the middle of all\n");
+            printf("Ajay is the youngest of all\n");
+        }
+        else
+        {
+            printf("Ajay is middle in all\n");
+            printf("Shyam is ypungest of all\n");
+        }
+    }
+    if(ajay>ram && ajay>shyam)
+    {
+        printf("Ajay is the eldest of all\n");
+        if(ram>shyam)
+        {
+            printf("Ram is middle of all\n");
+            printf("Shaym is youngest of all\n");
+        }
+        else
+        {
+            printf("Shyam is middle of all\n");
+            printf("Ram is youngest of all\n");
+        }
+    }
+    if(shyam>ram && shyam>ajay)
+    {
+        printf("Shyam is eldest of all\n");
+        if(ram>ajay)
+        {
+            printf("Ram is middle of all\n");
+            printf("Ajay is youngest of all\n");
+        }
+        else
+        {
+            printf("Ajay is middle of all\n");
+            printf("Ram is youngest of all\n");
+        }
+    }
+
+    return 0;
+}
+g
+#include<stdio.h>
+int main()
+{
+   int angle1, angle2, angle3;
+   printf("\nEnter the value of Angle1:");
+   scanf("%d",&angle1);
+   printf("\n Enter of the value of Angle2:");
+   scanf("%d", &angle2);
+   printf("\n Enter of value of Angle3:");
+   scanf("%d", &angle3);
+   if(angle1+angle2+angle3==180)
+   {
+    printf("The triangle is valid");
+   }
+   else
+   printf("The tringle is invalid");
+    return 0;
+}
+h
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int number, abs_number;
+ printf("\nEnter the number :");
+ scanf("%d", &number);
+ abs_number=abs(number);
+ printf("The absolute number : %d",abs_number);
+     return 0;
+}
+i
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int rac_b,rac_l,area_rac,peri_rac;
+printf("\n Enter the lenght of ractangle:  ");
+scanf("%d", &rac_l);
+printf("\n Enter of the breadth of Ractangle: ");
+scanf("%d",&rac_b);
+area_rac=rac_l*rac_b;
+peri_rac=2*(rac_l+rac_b);
+if(area_rac>peri_rac)
+{
+    printf("\nThe Area of ractangle %d is greater than Perimeter of ractangle %d",area_rac,peri_rac);
+}
+else
+printf("\nThe Perimeter of ractangle %d is greater than Area of Rectangle %d",area_rac,peri_rac);
+     return 0;
+}
+j
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+float x1,y1,x2,y2,x3,y3;
+printf("\n Enter the coordinate of (x1,y1):");
+scanf("%f,%f",&x1,&y1);
+printf("\n Enter the coordinates of(x2,y2)");
+scanf("%f,%f", &x2,&y2);
+printf("\n Enter the coordinates of (x3,y3)");
+scanf("%f,%f",&x3,&y3);
+if((y2-y1)/(x2-x1)==(y3-y1)/(x3-x1))
+{
+    printf("points lies on the straight line");
+}
+else
+printf(" the points are not lies on straight line");
+     return 0;
+}
+k
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int main()
+{
+float cen_x,cen_y,rad,x,y,d;
+printf("\n Enter the center x,y coordinate and radius:");
+scanf("%f,%f,%f",&cen_x,&cen_y,&rad);
+printf("\n Enter the coordinates of point x,y:");
+scanf("%f,%f", &x,&y);
+d=sqrt(pow((cen_x-x),2.0)+pow((cen_y-y),2.0));
+if(d<rad)
+{
+    printf("point is inside the circle\n");
+}
+else if(d==rad)
+{
+    printf("point is on the circle\n");
+}
+else
+printf(" the points is outside of circle\n");
+     return 0;
+}
+L
+#include<stdio.h>
+int main()
+{
+float x,y;
+printf("\n Enter the points(x,y) coodinates");
+scanf("%f%f",&x,&y);
+if(x==0 && y==0)
+{
+printf("\nThe points lies on origin");
+}
+if(x==0 && y!=0)
+{
+printf(" \nthe point lies on y axis");
+}
+if(x!=0 && y==0)
+{
+printf("\n the point lies on x axis");
+}
+if(x!=0 && y!=0)
+{
+printf(" \nthe points lies on plane");
+} 
+    return 0;
+}
+(G)
+a
+#include<stdio.h>
+int main()
+{
+int year;
+printf("\n Enter the any year");
+scanf("%d", &year);
+if((year%4==0)&&(year%100!=0)||(year%400==0))
+{
+    printf("\nThis year is leap year");
+}
+else
+printf("\nthis year is not leap year");
+    return 0;
+}
+b
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf(" Enter any character :\n");
+    scanf("%c",&ch);
+    if(ch>=65 && ch<=90)
+    {
+        printf("Input character is capital letter :\n");
+    }
+    else if(ch>=97 && ch<=122)
+    {
+        printf("Input character is small letter:\n");
+    }
+    else if(ch>=48 && ch<=57)
+    {
+        printf("Input character is digit\n:");
+    }
+    else
+    {
+        printf("Input character is symblos:\n");
+    }
+     return 0;
+}
+same code in diffrent way
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf(" Enter any character :\n");
+    scanf("%c",&ch);
+    if(ch>=65 && ch<=90)
+    
+        printf("Input character is capital letter :\n");
+    
+    else if(ch>=97 && ch<=122)
+    
+        printf("Input character is small letter:\n");
+    
+    else if(ch>=48 && ch<=57)
+    
+        printf("Input character is digit\n:");
+    
+    else
+    {
+        printf("Input character is symblos:\n");
+    }
+     return 0;
+}
+c
+#include<stdio.h>
+int main()
+{
+    float hardness, carbon , tensile;
+    printf(" Enter steel :\n");
+    scanf("%f %f %f",&hardness, &carbon, &tensile);
+    if(hardness>50 && carbon<0.7 && tensile>5600)
+    
+        printf("Grade is 10 :\n");
+    
+    else if(hardness>50 && carbon<0.7 && tensile<=5600)
+    
+        printf("Grade 9:\n");
+    
+    else if(hardness<=50 && carbon<0.7 && tensile>5600)
+    
+        printf("Grade 8\n:");
+    
+    else if(hardness>50 && carbon>0.7 && tensile>5600)
+    
+        printf("Grade 7:\n"); 
+    else if(hardness>50 || carbon<0.7 || tensile>5600)
+       printf("Grade 6:\n");
+    else
+    printf("Grade 5\n");   
+        return 0;
+}
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+     int lat;
+     float charg;
+     printf("Enter the number  late of days:");
+     scanf("%d",&lat);
+     if(lat<=5)
+     charg = 0.50;
+     if(lat>5 && lat <11)
+     charg = 1.0;
+     if(lat>10 && lat<31)
+     charg =5.0;
+     if(lat>30)
+     printf("your membership would be canceled.\n");
+     printf("You heve to pay Rs. %f ",charg);
+     getch();
+    return 0;
+}
+e
+#include<stdio.h>
+int main()
+{
+    int a,b,c, sum, largest;
+    printf(" Enter the three side of triangle\n");
+    scanf("%d %d %d",&a, &b, &c);
+    if(a>b && a>c)
+    {
+        sum=b+c;
+        largest=a;
+    }
+    else if(b>a && b>c)
+    {
+    sum=a+c;
+    largest= b;
+    }
+    else
+    {
+        sum= a+b;
+        largest=c;
+    }
+    printf("\n largest side is %d",largest,sum);
+    if(sum>largest)
+    {
+        printf("\n the triagle is valid");
+    }
+    else
+    {
+        printf("\n the triagle is not valid");
+    }
+    return 0;
+}
+f
+#include<stdio.h>
+int main()
+{
+    int a,b,c, sum, largest;
+    printf(" Enter the three side of triangle\n");
+    scanf("%d %d %d",&a, &b, &c);
+    if(a==b && b==c &&c==a)
+    {
+        printf("\nThe triangle is equilateral");
+    }
+    if((a==b && b!=c)|| (b==c &&a!=c)||(c==a&&a!=b))
+    {
+        printf("\n The triagle is isosceles");
+    }
+    if(a!=b && b!=c && c!=a)
+    {
+        printf("\nThe triangle is scalene");
+    }
+    if((a*a==b*b+c*c)||(b*b==a*a+c*c)||(c*c==a*a+b*b))
+    {
+        printf("\nThe triangle is right ");
+    }
+    
+    return 0;
+}
+g
+#include<stdio.h>
+int main()
+{
+float hours;
+printf("Enter the number of hours workers taken to finish the job\n");
+scanf("%f",&hours);
+if(hours>=2&&hours<=3)
+printf("Worker is highly efficient\n");
+else
+{
+    if(hours>=3&&hours<=4)
+    printf("\n Worker is ordered to improve his efficiency");
+    else
+    {
+        if(hours>=4&&hours<=5)
+        printf("\n Worker should be given training to improve his efficiency");
+        else
+        printf("\n worker should leave the company");
+    }
+}
+printf("\nPress any key to exit");
+
+    
+    return 0;
+h
+#include<stdio.h>
+int main()
+{
+int stk,odr,crdt;
+printf("Hello!!\nThe price of our items is 100Rs. per item.\n");
+printf("\nEnter the stock company have : ");
+scanf("%d",&stk);
+printf("\nEnter the quantity ordered : ");
+scanf("%d",&odr);
+printf("\nEnter the credit done by customer: ");
+scanf("%d",crdt);
+if(stk>=odr && crdt>=(100*odr))
+printf("\n\nYour order has been placed successfully and will be delivered to you shortly .");
+if(stk<odr && crdt>=(100*odr))
+printf("\n Your payment done is not sufficient for your ordered items.\nTry again!!");
+if(stk<odr && crdt<(100*odr))
+printf("\n\nwe have not sufficient items, but they will delivered to you shortly.");
+
+
+    
+    return 0;
+}
+A 2
+#include<stdio.h>
+int main()
+{
+     int year;
+     printf("\nEnter the Year:\n");
+     scanf("%d",&year);
+     ((year%4==0 && year%100!=0)?printf("Leap year"):((year%400==0)?printf("leap y"):printf("Not leap year")));
+return 0;
+}
+c
+#include<stdio.h>
+int main()
+{
+     int year;
+     printf("\nEnter the Year:\n");
+     scanf("%d",&year);
+     ((year%4==0 && year%100!=0)?printf("Leap year"):((year%400==0)?printf("leap y"):printf("Not leap year")));
+return 0;
+}
+
